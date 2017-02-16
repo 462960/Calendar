@@ -1,0 +1,135 @@
+@import "../../bower_components/susy/sass/susy";
+@import "normalize";
+@import "add-ones"; 
+
+ body {
+  background-color: #909DA2;
+  padding: 50px 0;
+}
+h4 {
+  text-align: center;
+}
+
+/* Main container */
+main {
+  @include container(350px);
+  min-width: 350px; 
+}
+
+/* Month name and L-R Arrows */
+h5 {
+  text-align: center;
+  position: relative;
+  background: #E5D380;
+  font-size: 22px;
+  padding: 22px 0;
+  margin: 0;
+  border: 2px $border-color solid;
+.leftArrow, .rightArrow {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  top: 22px;
+} 
+.leftArrow {
+  left: 5px;
+  &:before, &:after {
+    content: "";
+    background: #000;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  &:before {
+    top: 3px;
+    transform: rotate(-45deg);
+  }
+  &:after {
+    bottom: 3px;
+    transform: rotate(45deg);
+  }
+} 
+.rightArrow {
+  right: 5px;
+  &:before, &:after {
+    content: "";
+    background: #000;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  &:before {
+    top: 3px;
+    transform: rotate(45deg);
+  }
+  &:after {
+    bottom: 3px;
+    transform: rotate(-45deg);
+  }
+} 
+
+}
+
+/* Days of week Names*/
+.weekName {
+  @include container;
+  border-right: 1px solid $border-color;
+  li {
+    list-style: none;
+    @include gallery(1 of 7);
+    text-align: center;
+    padding: 5px 0;
+    border-left: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+     &:last-child {
+      color: $sunday;
+    }
+  }
+}
+
+/* Day's numbers */
+.days_container {
+  @include container;
+  border-right: 1px solid $border-color;
+  li {
+    list-style: none;
+    @include gallery(1 of 7);
+    text-align: center;
+    padding: 8px 0;
+    font-weight: bold;
+    border-left: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    transition: all .07s;
+     position: relative; 
+    /* cursor: pointer; */
+    &:hover{
+      transform: scale(1.01);
+      border-radius: 5px;
+    }
+    &.today {
+      background: #E5d380;
+    }
+    &.diff_month {
+      font-weight: normal;
+    }
+    &:last-child {
+      color: $sunday;
+    }
+}
+}
+
+// Clock
+.clock {
+  font-size: 30px;
+  text-align: center;
+}
+
+.github {
+  display: block;
+  text-align: center;
+  color: #000;
+  padding: 15px 0;
+}

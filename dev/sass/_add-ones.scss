@@ -1,0 +1,16 @@
+
+$susy:(
+gutters: 0,
+columns: 7,
+global-box-sizing: border-box, 
+/* debug:(image:show), */
+);
+
+/*------------------- Border box model------------------- */
+
+@include border-box-sizing;   
+
+/*------------------ Variables------------------ */
+$border-color: #989090;
+$sunday: #9E2424;
+
