@@ -56,7 +56,7 @@ export let  Calendar = React.createClass({
        rightClick={this.state.rightClick}/>
        <WeekDays/>
        <WeeksContainer month={this.state.month}/>
-       <a className="github" href="https://github.com/462960/Calendar">GitHub</a>
+       <a className="github" target="_blank" href="https://github.com/462960/Calendar">GitHub</a>
        </main>
 			)
 	}
