@@ -1,2 +1,2 @@
 # Calendar
-Localized Ukrainian calendar + sound
+Localized Ukrainian calendar + sound http://calendar.skepton.ru/
