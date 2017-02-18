@@ -1,2 +1,2 @@
 # Calendar
-Localized calendar+sound
+Localized Ukrainian calendar + sound
