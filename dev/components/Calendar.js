@@ -3,6 +3,7 @@ import WeekDays from './WeekDays';
 import MonthName from './MonthName';
 import WeeksContainer from './WeeksContainer';
 import Clock from './Clock';
+import Watches from './Watches';
 import Inputs from './Inputs';
 import moment from 'moment';
 
@@ -15,14 +16,19 @@ export let  Calendar = React.createClass({
 		leftClick: false,
 		rightClick: false,
 		position: 30,
-		today_color: "#E5D380"
+		today_color: "#E5D380",
 	};
 	},
 	componentDidMount(){
 		setInterval(()=>{
+			let timeArray = (moment().locale('uk').format('LTS')).split(':');
 			this.setState({
-			time: moment().locale('uk').format('LTS')	
-			})
+			sec: ((timeArray[2]/60)*360)+90,
+			min: (timeArray[1]/60)*360 + 90,
+			hour: (360/12)*timeArray[0] + 90 + (360/720)*timeArray[1]	
+			}, () => document.querySelector('.sec').style.transform = `rotate(${this.state.sec}deg)`,
+			         document.querySelector('.min').style.transform = `rotate(${this.state.min}deg)`,
+			         document.querySelector('.hour').style.transform = `rotate(${this.state.hour}deg)`)
 		},1000);
 	},
 	prevMonth(){
@@ -63,7 +69,7 @@ export let  Calendar = React.createClass({
 		return (
        <div className="wrapper">
        	<main>
-       	<Clock time={this.state.time}/>
+       	<Watches/>
        	<MonthName 
        	monthName={this.state.month.format("MMMM YYYY")} 
        	prev={this.prevMonth} 
