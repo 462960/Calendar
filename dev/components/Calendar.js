@@ -3,6 +3,7 @@ import WeekDays from './WeekDays';
 import MonthName from './MonthName';
 import WeeksContainer from './WeeksContainer';
 import Clock from './Clock';
+import Inputs from './Inputs';
 import moment from 'moment';
 
 
@@ -74,9 +75,10 @@ export let  Calendar = React.createClass({
        	<a className="github" target="_blank" href="https://github.com/462960/Calendar">GitHub</a>
        	
        	</main>
-       	
-       	<input className="position" onChange={this.movePosition} type="range" min="20" max="80"/>
-       	<input className="today_color" onChange={this.colorChange} type="color" defaultValue={this.state.today_color}/>
+       	<Inputs 
+       	movePosition={this.movePosition} 
+       	colorChange={this.colorChange}
+       	default={this.state.today_color}/>
        </div>
 			)
 	}
