@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export default () =>
+let WeekDays = () =>
 <ul className="weekName">
 	<li>Пнд</li>
 	<li>Вівт</li>
@@ -11,3 +11,5 @@ export default () =>
 	<li>Суб</li>
 	<li>Нед</li>
 </ul>
+
+export default WeekDays;

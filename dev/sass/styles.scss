@@ -2,9 +2,9 @@
 @import "normalize";
 @import "add-ones"; 
 
- body {
+  body {
   background-color: #909DA2;
-  padding: 50px 0;
+  /* padding: 50px 0; */
 }
 h4 {
   text-align: center;
@@ -13,14 +13,38 @@ h4 {
 /* Main container */
 main {
   @include container(350px);
-  min-width: 350px; 
+  min-width: 350px;
+  float: left;
+  margin-left: calc(var(--main_margin) - 175px); 
 }
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  min-width: 350px;
+}
+
+
+input.position {
+  width: 90%;
+  padding: 10px;
+  margin-left: 5%;
+  cursor: pointer;
+}
+
+input.today_color {
+  width: 50px;
+  margin: 15px auto;
+  display: block;
+}
+
 
 /* Month name and L-R Arrows */
 h5 {
   text-align: center;
   position: relative;
-  background: #E5D380;
+  background: var(--today_color);
   font-size: 22px;
   padding: 22px 0;
   margin: 0;
@@ -110,7 +134,7 @@ h5 {
       border-radius: 5px;
     }
     &.today {
-      background: #E5d380;
+      background: var(--today_color);
     }
     &.diff_month {
       font-weight: normal;
@@ -125,6 +149,44 @@ h5 {
 .clock {
   font-size: 30px;
   text-align: center;
+}
+
+.watches {
+  width: 160px;
+  height: 160px;
+   background: url(http://calendar.skepton.ru/Clock-160.png); 
+  margin: 20px auto;
+  position: relative;
+
+.hand {
+  height: 3px;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transition: all .05s;
+  transition-timing-function: cubic-bezier(0.01, 0.92, 0.48, 0.59);
+}
+
+.hour {
+  transform: rotate(90deg);
+  width: 25%;
+  left: 25%;
+  height: 4px;
+   transform-origin: 100%;
+}
+.min {
+  transform: rotate(20deg);
+  width: 60px;
+  left: 20px;
+}
+.sec {
+  transform: rotate(145deg);
+  width: 60%;
+ transform-origin: 83%;
+  height: 1px;
+}
+
 }
 
 .github {

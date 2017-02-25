@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export default (props) => 
+let Inputs = (props) => 
 <div>
  <input 
  className="position" 
@@ -14,3 +14,5 @@ export default (props) =>
  defaultValue={props.default}/>
 
 </div>
+
+export default Inputs; 

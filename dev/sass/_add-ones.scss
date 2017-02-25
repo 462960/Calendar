@@ -11,6 +11,10 @@ global-box-sizing: border-box,
 @include border-box-sizing;   
 
 /*------------------ Variables------------------ */
+html{
+	--today_color: #E5D380;
+	--main_margin: 50%;
+}
 $border-color: #989090;
 $sunday: #9E2424;
 

@@ -1,4 +1,6 @@
 import React from 'react';
 
-export default (props) =>
+let Clock = (props) =>
 <p className="clock">{props.time}</p>
+
+export default Clock;
