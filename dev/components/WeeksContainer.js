@@ -4,7 +4,7 @@ import Week from './Week';
 
 
 
-export default function(props){		
+let WeeksContainer = function(props){		
     let weeks = [];
     let done = false;
     let date = props.month.clone().startOf("month").startOf('isoweek');
@@ -30,3 +30,5 @@ return (
  <div>{weeks}</div>
 	)
 };
+
+export default WeeksContainer;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function(props) {
+let Day = function(props) {
       const {
         isCurrentMonth,
         isToday,
@@ -13,3 +13,5 @@ export default function(props) {
       </li>
     );
 }
+
+export default Day;

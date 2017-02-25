@@ -3,7 +3,7 @@ import moment from 'moment';
 import Day from './Day';
 
 
-export default function(props) {
+let Week = function(props) {
     let days = [];
     let {
       date,
@@ -27,28 +27,6 @@ export default function(props) {
       );
 
      }
-
-     //   for (let [i, cut] of date.entries()) {
-     //    if(i == 6){
-     //      continue;
-     //    }
-     //  let day = {
-     //      number: date.date(),
-     //      isCurrentMonth: date.month() === month.month(),
-     //      isToday: date.isSame(new Date(), "day"),
-     //  };
-
-     //   date = date.clone().add(1, "day");
-     //   let weekSet = <Day day={day} key={date} />
-           
-     //  days.push(weekSet);
-
-     // }
-
-      // days.push(date.clone().add(1, "day").slice(0,8).map(date =>
-      //  <Day day={day}
-      //         key={date}
-      //     /> ))
 //--------------------------------------------------
     return (
       <ul className="days_container">
@@ -57,3 +35,5 @@ export default function(props) {
     );
 
 }
+
+export default Week;
