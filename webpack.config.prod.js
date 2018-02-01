@@ -56,10 +56,7 @@ module.exports = config;
 
 
 // Old Webpack version 
-// const config = {
-//      entry: __dirname + '/dev/index.js',
-//     output: {
-//       path: __dirname +  '/dist',
+
 //       filename: 'bundle.js'
 //     },
 //     module: {
