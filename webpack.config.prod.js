@@ -57,7 +57,7 @@ module.exports = config;
 
 // Old Webpack version 
 
-//       filename: 'bundle.js'
+
 //     },
 //     module: {
 //         loaders: [
