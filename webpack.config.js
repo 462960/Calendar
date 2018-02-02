@@ -26,11 +26,7 @@ const config = {
             'css-loader',
             'sass-loader'
             ]
-            // use: [
-            // 'css-loader?sourceMap!',
-            // 'sass-loader?sourceMap!'
-            // ]
-      //})
+          
     }
          ]
     },
