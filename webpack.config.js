@@ -31,10 +31,6 @@ const config = {
          ]
     },
        plugins: [
-      // new ExtractTextPlugin({
-      // filename: 'styles.css',
-      // disable: false, 
-      // allChunks: true}), 
       new HTMLwebpackPlugin({
         template: './dev/index.template.html',
         inject: true
