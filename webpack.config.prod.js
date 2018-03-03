@@ -17,7 +17,7 @@ const config = {
         rules: [
             {
                 test: /\.js$/,
-                exclude: /(node_modules|bower_components)/, // Works both ways
+                exclude: /(node_modules|bower_components)/, 
                 use: 'babel-loader'
           },
           {
