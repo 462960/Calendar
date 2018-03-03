@@ -18,7 +18,7 @@ const config = {
             {
                 test: /\.js$/,
                 exclude: /(node_modules|bower_components)/, // Works both ways
-                //exclude: path => path.match(/node_modules
+                //exclude: path => path.match()
                 use: 'babel-loader'
           },
           {
