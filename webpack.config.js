@@ -15,7 +15,7 @@ const config = {
             {
                 test: /\.js$/,
                 use: 'babel-loader',
-                exclude: /(node_modules|bower_components)/,
+                exclude: /(node_modules|bower_components)/,   as
           },
             {
       test: /\.scss$/,
